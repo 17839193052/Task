@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ruoruo</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.div1 {
+				background-image: url(img/xiyuan.jpg);
+				width: 600px;
+				height: 350px;
+				margin: 0 auto;
+				border: 1px solid mediumpurple;
+				position: relative;
+			}
+			
+			.div2 {
+				background-color: transparent;
+				width: 400px;
+				height: auto;
+				position: absolute;
+				left: 0px;
+				top: 75px;
+				/*border: 1px solid red;*/
+				/*overflow: scroll;
+				overflow-x: hidden;
+				overflow-Y: hidden;*/
+			}
+			
+			.div2 p {
+				color: blue;
+				display: block;
+				width: 400px;
+				height: 1px;
+				padding: 30px;
+			}
+			
+			.div2 button {
+				width: 60px;
+				height: 30px;
+				margin-left: 20px;
+				background-color: transparent;
+				color: #383710;
+				font-weight: bold;
+				border-radius: 30px 0 30px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="div1">
+			<div class="div2">
+				<button onclick="myFunction()">问题一</button>
+				<p id="demo"></p>
+				<button onclick="myFunction_a()">问题二</button>
+				<p id="demo1"></p>
+				<button onclick="myFunction_b()">问题三</button>
+				<p id="demo2"></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function myFunction() {
+				var x;
+				var sum = null;
+				var person = prompt("请输入你的名字", "不要说谎哦");
+				if(person == "李晓冬"||person =="李海娇"||person =="珍杰"||person =="李若南") {
+					x = "大家好，我叫" + person + "。";
+					document.getElementById("demo").innerHTML = x;
+				} else {
+					alert("你太笨了，连自己名字都不知道，鄙视你，请重新输入！！！")
+				}
+
+			}
+
+			function myFunction_a() {
+				var person = prompt("你喜欢谁呢，嘻嘻(♡˙︶˙♡)", "不要说谎哦");
+				if(person == "你") {
+					x = "我也喜欢 " + person + "," + "〜⑦▽⑦〜  ";
+					document.getElementById("demo1").innerHTML = x;
+				} else if(person == "若若") {
+					x = person + "也喜欢 你" + "," + "〜⑦▽⑦〜  ";
+					document.getElementById("demo1").innerHTML = x;
+				} else if(person == "晓冬"||person == "李晓冬"||person == "珍杰"||person == "若若") {
+					x =  "我最喜欢 " +person + "," + "〜⑦▽⑦〜  ";
+					document.getElementById("demo1").innerHTML = x;
+				}else {
+					alert("TT,你居然不喜欢我，心碎了");
+				}
+			}
+
+			function myFunction_b() {
+				var person = prompt("她最喜欢吃什么水果", "千万不要答错哦");
+				if(person == "草莓" || person == "香蕉" || person == "橘子") {
+					x = "她最喜欢 吃" + person;
+					document.getElementById("demo2").innerHTML = x;
+				} else {
+					document.getElementById("demo2").innerHTML = "哼，你这都不知道，不喜欢你了";
+				}
+			}
+		</script>
+	</body>
+
+</html>
